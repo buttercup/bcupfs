@@ -1,0 +1,30 @@
+{
+  "name": "@buttercup/bcupfs",
+  "version": "0.0.0",
+  "description": "Buttercup FileSystem for in-vault file storage and encryption",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buttercup/bcupfs.git"
+  },
+  "keywords": [
+    "buttercup",
+    "fs",
+    "filesystem",
+    "encryption",
+    "storage",
+    "bcup"
+  ],
+  "author": "Perry Mitchell <perry@perrymitchell.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buttercup/bcupfs/issues"
+  },
+  "homepage": "https://github.com/buttercup/bcupfs#readme",
+  "dependencies": {
+    "iocane": "^1.0.2"
+  }
+}
