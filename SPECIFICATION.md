@@ -16,17 +16,17 @@ Following the initial payload comes the file index:
 
 ```
 @sec:index
-f,e628cdc5-8376-4b68-9420-6d9f38845f92:1548267900755,X6OCVNOLpAZDQdkimo9a1ua5a4vgX3l1dWhT/g6POag=$67fa7d1b360a09595cd7711194668cd0$90+35t/I1UCI$4a4e50507abe6a2f5c2c8789cbb216e505d11d17df541a586adf818f98dc9d0a$250000$cbc
-f,3c599963-a200-4327-8765-ff097abd5818:1548268205620,O7pZ/Xt6yCjYzIniW/nQugPZsk8Rm3zkXT2+Y0cRaC+1r1Vi0fU9kB1NWWgS4KsL$7f47a379c1d9b1866401aa12d807d0ed$OX8vIpeeCJVH$ed108a05a7ae450557fe2b29c3894659bd72bf65c89f9ceea5dcccdcc637f846$250000$cbc
+f,e628cdc5-8376-4b68-9420-6d9f38845f92:1548267900755,232193,X6OCVNOLpAZDQdkimo9a1ua5a4vgX3l1dWhT/g6POag=$67fa7d1b360a09595cd7711194668cd0$90+35t/I1UCI$4a4e50507abe6a2f5c2c8789cbb216e505d11d17df541a586adf818f98dc9d0a$250000$cbc
+f,3c599963-a200-4327-8765-ff097abd5818:1548268205620,692835,O7pZ/Xt6yCjYzIniW/nQugPZsk8Rm3zkXT2+Y0cRaC+1r1Vi0fU9kB1NWWgS4KsL$7f47a379c1d9b1866401aa12d807d0ed$OX8vIpeeCJVH$ed108a05a7ae450557fe2b29c3894659bd72bf65c89f9ceea5dcccdcc637f846$250000$cbc
 ```
 
 The file index contains files, 1 per line. Each item is in the following format:
 
 ```
-(type),(UUID):(timestamp),(encrypted payload)
+(type),(UUID):(timestamp),(encrypted size),(encrypted payload)
 ```
 
-The `(type)` is a single-character item type indicator. At the time of writing only `f` is supported, for File. The `(UUID)` value is a randomly generated version-4 UUID, and the `(timestamp)` is a JavaScript timestamp, set when the file was _added_. The `(encrypted payload)` is an [iocane](https://github.com/perry-mitchell/iocane) encrypted JSON payload which resembles the following:
+The `(type)` is a single-character item type indicator. At the time of writing only `f` is supported, for File. The `(UUID)` value is a randomly generated version-4 UUID, and the `(timestamp)` is a JavaScript timestamp, set when the file was _added_. The `(encrypted size)` is the size, in bytes, of the encrypted file. The `(encrypted payload)` is an [iocane](https://github.com/perry-mitchell/iocane) encrypted JSON payload which resembles the following:
 
 ```json
 {
